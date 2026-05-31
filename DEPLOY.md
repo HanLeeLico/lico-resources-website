@@ -58,35 +58,41 @@ git push -u origin main
 
 ---
 
-## Deploy to Vercel
+## Deploy to Netlify
 
 Once the repo is on GitHub:
 
-1. Go to https://vercel.com/new
-2. Sign in with your GitHub account (Vercel will request read access to your repos — it's safe)
-3. Click "Import" next to the new repo
-4. Vercel auto-detects Next.js. Accept all the defaults.
-5. **(Optional) Add env vars** under "Environment Variables" before deploying:
+1. Go to https://app.netlify.com/start
+2. Click **Import from GitHub**
+3. Authorize Netlify to read your repos (Netlify will ask once — it's safe; you can scope it to just this one repo if you prefer)
+4. Pick `lico-resources-website` from the list
+5. **Build settings** — Netlify reads `netlify.toml` so everything is pre-configured:
+   - Build command: `npm run build` (auto)
+   - Publish directory: `.next` (auto)
+   - Functions/SSR: handled by the `@netlify/plugin-nextjs` plugin (auto-installed)
+6. **(Optional) Environment variables** — click "Add variable" under "Environment variables":
    - `RESEND_API_KEY` — sign up at https://resend.com, copy from API Keys
    - `CONTACT_TO_EMAIL` — default `info@licoresources.com`
    - `CONTACT_FROM_EMAIL` — must be a verified Resend sender, e.g. `enquiries@licoresources.com`
-6. Click "Deploy"
+7. Click **Deploy site**
 
-About 60 seconds later, you'll have a live URL like `lico-resources-website.vercel.app`.
+About 90 seconds later, you'll have a live URL like `random-name-abc123.netlify.app`. You can rename the subdomain under **Site settings → Site information → Change site name**.
 
 ---
 
-## Point licoresources.com at Vercel
+## Point licoresources.com at Netlify
 
-After the Vercel deploy works:
+After the Netlify deploy works:
 
-1. In the Vercel project → **Settings → Domains**
-2. Add `licoresources.com` and `www.licoresources.com`
-3. Vercel shows the DNS records you need to add at your domain registrar
-4. Log into your domain registrar (whoever you bought `licoresources.com` from — likely Namecheap, GoDaddy, Cloudflare, or your old hosting provider)
-5. Update the DNS records as Vercel instructs (usually an A record for `@` and a CNAME for `www`)
-6. Wait 10 minutes to a few hours for DNS to propagate
-7. Done — `www.licoresources.com` now serves the new site
+1. In the Netlify site dashboard → **Domain management** (or **Site settings → Domain management**)
+2. Click **Add a domain**, enter `licoresources.com`
+3. Netlify will show the DNS records you need (typically: an A record for `@` pointing to Netlify's load balancer, and a CNAME for `www`)
+4. Log into your domain registrar (Namecheap, GoDaddy, Cloudflare, or your old hosting provider)
+5. Update the DNS records as Netlify instructs
+6. Back in Netlify, click **Verify DNS configuration** once you've saved the changes
+7. Netlify will auto-provision an SSL certificate (Let's Encrypt) within a few minutes
+8. Wait 10 minutes to a few hours for DNS to fully propagate
+9. Done — `www.licoresources.com` now serves the new site
 
 The old site keeps working until DNS flips, so there's no downtime.
 
@@ -94,7 +100,7 @@ The old site keeps working until DNS flips, so there's no downtime.
 
 ## Automatic redeploys
 
-Once GitHub is connected to Vercel, every time you push to `main` Vercel redeploys automatically — usually in 30-60 seconds. You don't need to touch Vercel again.
+Once GitHub is connected to Netlify, every time you push to `main` Netlify redeploys automatically — usually 60-120 seconds. You don't need to touch Netlify again.
 
 To make a change later:
 
@@ -114,12 +120,12 @@ Vercel sees the push and rebuilds.
 
 Once live on Vercel (and especially before flipping DNS), check these:
 
-- [ ] Open `your-site.vercel.app/sitemap.xml` — should list all pages
-- [ ] Open `your-site.vercel.app/robots.txt` — should reference the sitemap
+- [ ] Open `your-site.netlify.app/sitemap.xml` — should list all pages
+- [ ] Open `your-site.netlify.app/robots.txt` — should reference the sitemap
 - [ ] Share the URL on LinkedIn / WhatsApp / Slack — the OG image should preview correctly
 - [ ] Submit a test enquiry through `/contact` — should arrive at `info@licoresources.com` (if Resend env vars are set)
 - [ ] Click through Home → About → Services → Contractors → Insights → Article → Contact — all links work
-- [ ] `your-site.vercel.app/portal/login` loads
+- [ ] `your-site.netlify.app/portal/login` loads
 - [ ] Open a tab and check the favicon shows the red "L"
 - [ ] Run Lighthouse in Chrome DevTools — aim for 90+ on Performance, Accessibility, SEO
 
