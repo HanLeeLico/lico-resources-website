@@ -1,0 +1,27 @@
+# dependencies
+node_modules
+.pnp
+.pnp.*
+.yarn/*
+
+# build output
+.next
+out
+build
+dist
+
+# env (never commit secrets — use .env.example as the template)
+.env*.local
+.env.production
+
+# editor / OS noise
+.DS_Store
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# vercel
+.vercel
+*.tsbuildinfo
+next-env.d.ts
