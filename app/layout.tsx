@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
+import { ProfessionalServiceJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,20 +21,24 @@ const SITE_URL = "https://www.licoresources.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lico Resources — Cybersecurity & Technology GRC Recruitment",
+    default: "Cybersecurity Recruitment Singapore | Lico Resources",
     template: "%s | Lico Resources",
   },
   description:
-    "Specialist recruitment firm focused on cybersecurity and technology Governance, Risk & Compliance — across Singapore, APAC, and the Middle East.",
+    "Specialist cybersecurity, CISO, tech risk, IT audit & GRC recruitment in Singapore. Permanent and contract placements across APAC and the Middle East. EA Licence 13C6733.",
   keywords: [
-    "cybersecurity recruitment",
-    "GRC recruitment",
+    "cybersecurity recruitment Singapore",
+    "CISO recruiter Singapore",
+    "cybersecurity headhunter Singapore",
+    "GRC recruitment Singapore",
     "technology risk recruitment",
-    "Singapore cybersecurity headhunter",
-    "CISO search",
-    "IT audit recruitment",
-    "MAS TRM specialists",
-    "APAC cybersecurity recruiter",
+    "IT audit recruitment Singapore",
+    "MAS TRM specialist recruiter",
+    "cybersecurity executive search APAC",
+    "cybersecurity contractor Singapore",
+    "vCISO Singapore",
+    "cloud security recruiter",
+    "Middle East cybersecurity recruitment",
   ],
   authors: [{ name: "Lico Resources" }],
   creator: "Lico Resources",
@@ -45,18 +49,18 @@ export const metadata: Metadata = {
     locale: "en_SG",
     url: SITE_URL,
     siteName: "Lico Resources",
-    title: "Lico Resources — Cybersecurity & Technology GRC Recruitment",
+    title: "Cybersecurity Recruitment Singapore | Lico Resources",
     description:
-      "Specialist recruitment firm focused on cybersecurity and technology Governance, Risk & Compliance — across Singapore, APAC, and the Middle East.",
+      "Specialist cybersecurity, CISO, tech risk, IT audit & GRC recruitment in Singapore. Permanent and contract across APAC and the Middle East.",
     images: [
-      { url: "/og-image.png", width: 1200, height: 630, alt: "Lico Resources" },
+      { url: "/og-image.png", width: 1200, height: 630, alt: "Lico Resources — Cybersecurity & Tech GRC Recruitment" },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lico Resources — Cybersecurity & Technology GRC Recruitment",
+    title: "Cybersecurity Recruitment Singapore | Lico Resources",
     description:
-      "Specialist recruitment firm focused on cybersecurity and technology Governance, Risk & Compliance — Singapore, APAC, Middle East.",
+      "Specialist cybersecurity & tech GRC recruitment. Singapore. APAC. Middle East. EA Licence 13C6733.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -90,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-SG" className={`${inter.variable} ${mono.variable}`}>
       <body className="font-sans">
-        <OrganizationJsonLd />
+        <ProfessionalServiceJsonLd />
         <WebsiteJsonLd />
         {children}
       </body>

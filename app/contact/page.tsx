@@ -1,24 +1,29 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with Lico Resources. Singapore-based cybersecurity and tech GRC recruitment.",
+  title: "Contact Lico Resources — Cybersecurity Recruitment Singapore",
+  description:
+    "Brief us on a cybersecurity or tech GRC search, or submit your CV confidentially. Singapore office at 5 Shenton Way. We respond within 48 hours.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact — Lico Resources",
-    description: "Brief us on a search or submit your CV. We respond within 48 hours.",
+    title: "Contact Lico Resources",
+    description: "Singapore cybersecurity & tech GRC recruitment. Brief us or submit your CV. We respond within 48 hours.",
     url: "/contact",
     type: "website",
+    images: [{ url: "/og-contact.png", width: 1200, height: 630, alt: "Contact Lico Resources" }],
   },
+  twitter: { card: "summary_large_image", images: ["/og-contact.png"] },
 };
 
 export default function Contact() {
   return (
     <main>
       <Nav />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Contact", href: "/contact" }]} />
 
       <section className="max-w-7xl mx-auto px-8 pt-16 pb-12">
         <div className="tag mono mb-4">CONTACT</div>

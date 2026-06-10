@@ -3,18 +3,21 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { articles, getRecentArticles } from "@/lib/articles";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Insights — Lico Resources",
+  title: "Cybersecurity Hiring Insights & Market Notes",
   description:
-    "Weekly notes on cybersecurity and technology GRC hiring across APAC. Published on LinkedIn, archived here.",
+    "Weekly insights on cybersecurity, CISO compensation, IT audit, tech risk hiring across Singapore, APAC, and the Middle East. Career advice for cybersecurity professionals.",
   alternates: { canonical: "/insights" },
   openGraph: {
-    title: "Insights — Lico Resources",
-    description: "Weekly notes on cybersecurity and technology GRC hiring across APAC.",
+    title: "Cybersecurity Hiring Insights — Lico Resources",
+    description: "Weekly notes on cybersecurity and tech GRC hiring across APAC.",
     url: "/insights",
     type: "website",
+    images: [{ url: "/og-insights.png", width: 1200, height: 630, alt: "Lico Resources Insights" }],
   },
+  twitter: { card: "summary_large_image", images: ["/og-insights.png"] },
 };
 
 // Legacy LinkedIn-only post teasers (kept for now; new posts go via lib/articles).
@@ -36,6 +39,7 @@ export default function InsightsPage() {
   return (
     <main>
       <Nav />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Insights", href: "/insights" }]} />
 
       <section className="max-w-7xl mx-auto px-8 pt-16 pb-12">
         <div className="tag mono mb-4">INSIGHTS</div>

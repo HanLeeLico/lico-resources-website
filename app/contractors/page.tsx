@@ -1,18 +1,21 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Contractors",
+  title: "Interim CISO, vCISO & Cybersecurity Contractors Singapore",
   description:
-    "Contractor capability: interim CISOs, vCISOs, tech risk leads, IT audit specialists, cloud security SMEs, pen-test crews.",
+    "Interim CISO, vCISO, tech risk leads, IT audit specialists, cloud security SMEs, and penetration testing crews. Contract & project engagements across Singapore and APAC.",
   alternates: { canonical: "/contractors" },
   openGraph: {
-    title: "Contractors — Lico Resources",
-    description: "Interim CISO, tech risk, IT audit, cloud security SMEs. Contract & project engagements.",
+    title: "Interim CISO & Cybersecurity Contractors — Lico Resources",
+    description: "vCISO, tech risk, IT audit, cloud security SMEs. Day-rate and project engagements.",
     url: "/contractors",
     type: "website",
+    images: [{ url: "/og-contractors.png", width: 1200, height: 630, alt: "Lico Resources Contractors" }],
   },
+  twitter: { card: "summary_large_image", images: ["/og-contractors.png"] },
 };
 
 const engagements = [
@@ -28,6 +31,7 @@ export default function ContractorsPage() {
   return (
     <main>
       <Nav />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Contractors", href: "/contractors" }]} />
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-8 pt-16 pb-12">

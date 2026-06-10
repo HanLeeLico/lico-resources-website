@@ -1,18 +1,21 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Lico Resources",
   description:
-    "A specialist cybersecurity and technology GRC recruitment firm. Singapore-based. Founded 2013. Regional reach across APAC and the Middle East.",
+    "Singapore-based specialist cybersecurity and tech GRC recruitment firm. Founded 2013. 500+ professionals placed across APAC and the Middle East. EA Licence 13C6733.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About — Lico Resources",
-    description: "Specialist cybersecurity and tech GRC recruitment. Singapore-based. Founded 2013.",
+    title: "About Lico Resources — Specialist Cybersecurity Recruitment Singapore",
+    description: "Founded 2013. 500+ placements. Cybersecurity, CISO, GRC across Singapore, APAC, Middle East.",
     url: "/about",
     type: "website",
+    images: [{ url: "/og-about.png", width: 1200, height: 630, alt: "About Lico Resources" }],
   },
+  twitter: { card: "summary_large_image", images: ["/og-about.png"] },
 };
 
 const credentials = [
@@ -26,6 +29,7 @@ export default function About() {
   return (
     <main>
       <Nav />
+      <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]} />
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-8 pt-16 pb-16">
@@ -121,17 +125,56 @@ export default function About() {
         </div>
       </section>
 
+      {/* AREAS WE SERVE — local SEO */}
+      <section className="max-w-7xl mx-auto px-8 py-20">
+        <div className="tag mono mb-4">AREAS WE SERVE</div>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 max-w-3xl">
+          Singapore-headquartered. <span className="accent">Regional reach.</span>
+        </h2>
+        <p className="text-black/55 mb-10 max-w-2xl">
+          Our cybersecurity and tech GRC recruitment practice covers Singapore as the home market, with active mandates across Asia Pacific and the Middle East.
+        </p>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="card rounded-2xl p-7">
+            <div className="mono accent text-xs mb-3 tracking-widest">PRIMARY</div>
+            <div className="text-xl font-bold mb-2">Singapore</div>
+            <div className="text-black/55 text-sm leading-relaxed">
+              CBD-based, MAS-regulated financial institutions, FinTechs, Big 4 consultancies, regional HQs, government-linked corporations, and Singapore-based MNCs.
+            </div>
+          </div>
+          <div className="card rounded-2xl p-7">
+            <div className="mono accent text-xs mb-3 tracking-widest">ASIA PACIFIC</div>
+            <div className="text-xl font-bold mb-2">Regional Markets</div>
+            <div className="text-black/55 text-sm leading-relaxed">
+              Hong Kong, Malaysia, Indonesia, the Philippines, Thailand, Vietnam, Australia. Regional hubs and country-level cybersecurity leadership searches.
+            </div>
+          </div>
+          <div className="card rounded-2xl p-7">
+            <div className="mono accent text-xs mb-3 tracking-widest">MIDDLE EAST</div>
+            <div className="text-xl font-bold mb-2">GCC &amp; Beyond</div>
+            <div className="text-black/55 text-sm leading-relaxed">
+              United Arab Emirates (Dubai, Abu Dhabi), Saudi Arabia, Qatar, and Bahrain. Sovereign wealth, energy, finance, and government cybersecurity mandates.
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-8 py-24 text-center">
         <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
           Ready to brief us, or to be represented?
         </h3>
-        <p className="text-black/55 mb-8">We move within 48 hours.</p>
+        <p className="text-black/55 mb-8">
+          We move within 48 hours. Read more about our{" "}
+          <a href="/services" className="accent hover:underline">cybersecurity recruitment services</a>{" "}
+          or{" "}
+          <a href="/contractors" className="accent hover:underline">interim CISO and contractor engagements</a>.
+        </p>
         <div className="flex justify-center gap-4 flex-wrap">
           <a href="/contact" className="btn-primary px-6 py-3.5 rounded-md font-semibold inline-flex items-center gap-2">
-            Get in Touch <span>→</span>
+            Contact our Singapore office <span>→</span>
           </a>
-          <a href="/services" className="btn-ghost px-6 py-3.5 rounded-md font-semibold">Our Services</a>
+          <a href="/services" className="btn-ghost px-6 py-3.5 rounded-md font-semibold">See our recruitment services</a>
         </div>
       </section>
 
