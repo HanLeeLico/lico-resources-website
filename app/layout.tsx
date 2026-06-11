@@ -16,7 +16,9 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://www.licoresources.com";
+// Allow staging/production to set their own base URL via env var.
+// Falls back to www.licoresources.com (the eventual production URL).
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.licoresources.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Lico Resources",
   },
   description:
-    "Specialist cybersecurity, CISO, tech risk, IT audit & GRC recruitment in Singapore. Permanent and contract placements across APAC and the Middle East. EA Licence 13C6733.",
+    "Singapore cybersecurity, CISO, tech risk & GRC recruitment. Permanent and contract placements across APAC and the Middle East.",
   keywords: [
     "cybersecurity recruitment Singapore",
     "CISO recruiter Singapore",
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Lico Resources",
     title: "Cybersecurity Recruitment Singapore | Lico Resources",
     description:
-      "Specialist cybersecurity, CISO, tech risk, IT audit & GRC recruitment in Singapore. Permanent and contract across APAC and the Middle East.",
+      "Singapore cybersecurity & tech GRC recruitment. CISO, IT audit, tech risk. APAC & Middle East.",
     images: [
       { url: "/og-image.png", width: 1200, height: 630, alt: "Lico Resources — Cybersecurity & Tech GRC Recruitment" },
     ],

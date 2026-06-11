@@ -10,7 +10,7 @@ export const plateau: Article = {
   excerpt:
     "I get a version of this call at least twice a month. Ten years of solid work. Good track record. People like them. But nothing's moving. The mid-career plateau hits people who did everything right.",
   cardExcerpt:
-    "I get a version of this call twice a month. Ten years of solid work. Good track record. People like them. But nothing's moving. Here's what I've observed after placing people across this exact stage for years.",
+    "I get this call twice a month. Ten years of solid work, good track record — but nothing's moving. What I've learnt placing people through this stage.",
   carousel: [
     { src: "/articles/plateau-slide-1.png", alt: "The Mid-Career Plateau — slide 1" },
     { src: "/articles/plateau-slide-2.png", alt: "The Mid-Career Plateau — slide 2" },

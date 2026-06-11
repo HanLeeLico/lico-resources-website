@@ -17,14 +17,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return { title: "Article not found" };
 
   const ogImage = article.carousel?.[0]?.src ?? "/og-image.png";
+  // Use cardExcerpt for social previews if it's tighter; else trim the full excerpt to ~150 chars
+  const socialBlurb =
+    article.cardExcerpt ?? article.excerpt.slice(0, 150).replace(/\s+\S*$/, "") + "…";
   return {
     title: `${article.title} — Lico Resources`,
-    description: article.excerpt,
+    description: socialBlurb,
     alternates: { canonical: `/insights/${slug}` },
     openGraph: {
       type: "article",
+      siteName: "Lico Resources",
       title: article.title,
-      description: article.excerpt,
+      description: socialBlurb,
       url: `/insights/${slug}`,
       publishedTime: article.publishedDate,
       authors: ["Lico Resources"],
@@ -34,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: {
       card: "summary_large_image",
       title: article.title,
-      description: article.excerpt,
+      description: socialBlurb,
       images: [ogImage],
     },
   };
