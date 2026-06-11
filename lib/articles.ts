@@ -25,8 +25,10 @@ export type Article = {
 };
 
 import { plateau } from "./articles/plateau";
+import { debrief } from "./articles/debrief";
+import { boomerang } from "./articles/boomerang";
 
-export const articles: Article[] = [plateau];
+export const articles: Article[] = [boomerang, debrief, plateau];
 
 export const articlesBySlug: Record<string, Article> = Object.fromEntries(
   articles.map((a) => [a.slug, a])

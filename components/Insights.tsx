@@ -1,12 +1,10 @@
 "use client";
 
 import { MouseEvent } from "react";
+import Link from "next/link";
+import { getRecentArticles } from "@/lib/articles";
 
-const posts = [
-  { tag: "INDUSTRY INSIGHTS", read: "6 MIN READ", title: "The Future of Hiring: Degrees, AI, and Everything In Between", excerpt: "Degrees still matter — but everyone needs AI fluency now. It's becoming as fundamental as email..." },
-  { tag: "MARKET PULSE", read: "4 MIN READ", title: "What CISO Comp Looks Like in Singapore Right Now", excerpt: "Base + bonus + equity benchmarks across banks, fintechs, and Big Tech APAC HQs..." },
-  { tag: "CANDIDATE NOTE", read: "5 MIN READ", title: "Why Counter-Offers Almost Always Fail", excerpt: "The pattern I see every quarter: accept the counter, leave in nine months anyway. Here's why..." },
-];
+const posts = getRecentArticles(3);
 
 export default function Insights() {
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -20,21 +18,23 @@ export default function Insights() {
           <div>
             <div className="tag mono mb-4">INSIGHTS</div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-              From the <span className="accent">LinkedIn feed.</span>
+              From the <span className="accent">field.</span>
             </h2>
           </div>
-          <a href="/insights" className="mono text-sm accent hover:underline">VIEW ALL POSTS →</a>
+          <Link href="/insights" className="mono text-sm accent hover:underline">VIEW ALL POSTS →</Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-4">
-          {posts.map((p, i) => (
-            <article key={i} className="card rounded-2xl p-7" onMouseMove={onMove}>
+          {posts.map((p) => (
+            <article key={p.slug} className="card rounded-2xl p-7 flex flex-col" onMouseMove={onMove}>
               <div className="flex items-center gap-2 mono text-xs text-black/40 mb-5">
-                <span>{p.tag}</span> <span className="accent">·</span> <span>{p.read}</span>
+                <span>{p.category}</span> <span className="accent">·</span> <span>{p.readTime}</span>
               </div>
               <h3 className="text-xl font-bold mb-3 leading-snug">{p.title}</h3>
-              <p className="text-black/55 text-sm leading-relaxed mb-6">{p.excerpt}</p>
-              <a href="https://www.linkedin.com/company/lico-resources" target="_blank" rel="noopener" className="mono accent text-xs hover:underline">READ ON LINKEDIN →</a>
+              <p className="text-black/55 text-sm leading-relaxed mb-6 flex-1">{p.cardExcerpt || p.excerpt}</p>
+              <Link href={`/insights/${p.slug}`} className="mono accent text-xs hover:underline mt-auto">
+                READ ARTICLE →
+              </Link>
             </article>
           ))}
         </div>
