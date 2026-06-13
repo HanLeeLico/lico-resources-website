@@ -87,8 +87,8 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   verification: {
-    // Add real verification tokens before launch:
-    // google: "google-site-verification-token",
+    // Set GOOGLE_SITE_VERIFICATION env var in Netlify with the value Google gives you.
+    google: process.env.GOOGLE_SITE_VERIFICATION,
   },
 };
 
