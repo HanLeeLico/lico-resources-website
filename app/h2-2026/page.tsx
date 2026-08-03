@@ -1,0 +1,148 @@
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
+
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "H2 2026 Snapshot & Outlook — Cybersecurity & Tech GRC Hiring Report",
+  description:
+    "Singapore FS cybersecurity & tech GRC hiring: compensation, contracting and the regulatory calendar. Lico Resources H2 2026 Snapshot & Outlook.",
+  alternates: { canonical: "/h2-2026" },
+  openGraph: {
+    title: "H2 2026 Snapshot & Outlook — Lico Resources",
+    description:
+      "CISO, Security & GRC hiring — compensation, contracting and the regulatory calendar. Singapore FS cybersecurity & tech GRC.",
+    url: "/h2-2026",
+    type: "website",
+    images: [{ url: "/og-h2-2026.png", width: 1200, height: 630, alt: "H2 2026 Snapshot & Outlook — Lico Resources" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og-h2-2026.png"] },
+};
+
+const REPORT_EMAIL = "nicole@licoresources.com";
+
+const stats = [
+  { value: "+10–12%", label: "Cloud Sec / AppSec", note: "Head-of-function comp movement, H1 2026" },
+  { value: "S$650k+", label: "Tier-1 CISO total comp", note: "In strong bonus / LTI years" },
+  { value: "15–20%", label: "Switcher premium", note: "Cloud Security & senior IC moves" },
+  { value: "2027", label: "AI security arrives", note: "A distinct org-chart line item" },
+];
+
+const inside = [
+  {
+    title: "2026 comp bands by role and institution type",
+    body: "CISO to IT Audit Manager, split across Tier-1, mid-size and digital bank / fintech — granularity no published survey provides.",
+  },
+  {
+    title: "Accountability check on our Q4 2025 calls",
+    body: "We staked five predictions six months ago. Here's what held, what missed, and why.",
+  },
+  {
+    title: "The regulatory calendar driving 2026–27 hiring",
+    body: "TPRM, AI Risk Management, Cyber Trust Mark milestones — mapped to the roles they will force onto org charts.",
+  },
+  {
+    title: "Interim, fractional and vCISO day rates",
+    body: "A market not publicly surveyed at this granularity — engagement types, rates, and the factors that move them.",
+  },
+  {
+    title: "AI security: from curiosity to mandate",
+    body: "Initial comp guidance published ahead of the major surveys — and where the role lands on 2027 org charts.",
+  },
+  {
+    title: "Sector-by-sector hiring stories",
+    body: "Retail and digital banks, wholesale, insurers, asset managers, payments & exchanges, fintechs — same market, six logics.",
+  },
+];
+
+export default function H2_2026() {
+  return (
+    <main>
+      <Nav />
+
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "H2 2026 Snapshot & Outlook", href: "/h2-2026" },
+        ]}
+      />
+
+      {/* Hero */}
+      <section className="max-w-7xl mx-auto px-8 pt-16 pb-14">
+        <div className="tag mono mb-4">SINGAPORE FS · CYBERSECURITY &amp; TECH GRC</div>
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 max-w-3xl">
+          H2 2026 Snapshot &amp; Outlook<span className="accent">.</span>
+        </h1>
+        <p className="text-black/65 text-lg md:text-xl max-w-2xl leading-relaxed">
+          CISO, Security &amp; GRC hiring — compensation, contracting and the regulatory calendar. Built on
+          Lico&rsquo;s H1 2026 placement evidence, published salary surveys and MAS / CSA primary sources.
+        </p>
+        <div className="mono text-xs text-black/40 mt-6">PUBLISHED JUNE 2026 · 16 PAGES</div>
+        <div className="flex flex-wrap gap-4 mt-10">
+          <a href="#get" className="btn-primary px-6 py-3.5 rounded-md font-semibold inline-flex items-center gap-2">
+            Get the full report <span>→</span>
+          </a>
+          <a href="#inside" className="btn-ghost px-6 py-3.5 rounded-md font-semibold">
+            What&rsquo;s inside
+          </a>
+        </div>
+      </section>
+
+      {/* Key stats */}
+      <section className="border-y border-black/10 bg-[#F4F1ED]">
+        <div className="max-w-7xl mx-auto px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <div className="stat-num text-3xl md:text-4xl font-extrabold tracking-tight">{s.value}</div>
+              <div className="mono text-xs tracking-widest uppercase mt-2">{s.label}</div>
+              <div className="text-sm text-black/50 mt-1">{s.note}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* What's inside */}
+      <section id="inside" className="max-w-7xl mx-auto px-8 py-20">
+        <div className="tag mono mb-4">WHAT&rsquo;S INSIDE</div>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-10 max-w-2xl">
+          Six things the report covers<span className="accent">.</span>
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {inside.map((item) => (
+            <div key={item.title} className="card rounded-2xl p-8">
+              <div className="mono accent text-xs mb-3">REPORT SECTION</div>
+              <h3 className="text-lg font-bold mb-2 tracking-tight">{item.title}</h3>
+              <p className="text-black/55 leading-relaxed">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Get the report */}
+      <section id="get" className="dark-hero relative overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-50" />
+        <div className="glow glow-red-1" />
+        <div className="relative max-w-7xl mx-auto px-8 py-24">
+          <div className="tag mono mb-4">GET THE REPORT</div>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 max-w-2xl">
+            Precise, sector-specific intelligence you can take to the board<span className="accent">.</span>
+          </h2>
+          <p className="text-white/60 max-w-xl leading-relaxed mb-8">
+            The full 16-page PDF — comp bands, rate cards and the accountability check — isn&rsquo;t posted
+            publicly. Email {REPORT_EMAIL} and we&rsquo;ll send it straight over.
+          </p>
+          <a
+            href={`mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(
+              "H2 2026 Snapshot & Outlook — please send the report"
+            )}`}
+            className="btn-primary px-6 py-3.5 rounded-md font-semibold inline-flex items-center gap-2"
+          >
+            Email {REPORT_EMAIL} <span>→</span>
+          </a>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
