@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ProfessionalServiceJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans">
         <ProfessionalServiceJsonLd />
         <WebsiteJsonLd />
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
