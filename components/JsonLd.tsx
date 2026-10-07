@@ -29,7 +29,7 @@ export function ProfessionalServiceJsonLd() {
     slogan: "Less is more. Specialisation matters.",
     foundingDate: "2013",
     email: "info@licoresources.com",
-    telephone: "+65 8481 8854",
+    telephone: "+65 8334 2286",
     priceRange: "$$$",
     address: {
       "@type": "PostalAddress",
