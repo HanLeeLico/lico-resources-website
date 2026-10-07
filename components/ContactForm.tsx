@@ -105,6 +105,7 @@ export default function ContactForm() {
       >
         {status === "submitting" ? "Sending…" : "Send Message →"}
       </button>
+      <p className="text-xs text-black/45">We&apos;ll use your details only to reply to you. See our <a href="/privacy" className="underline hover:text-black">Privacy Policy</a>.</p>
     </form>
   );
 }
