@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-4">
         <Logo />
         <div className="mono text-xs text-black/40">SINGAPORE · APAC · MIDDLE EAST</div>
-        <div className="mono text-xs text-black/30">© {new Date().getFullYear()} LICO RESOURCES</div>
+        <div className="mono text-xs text-black/30">© {new Date().getFullYear()} LICO RESOURCES · <a href="/privacy" className="hover:text-black underline">PRIVACY POLICY</a></div>
       </div>
     </footer>
   );
