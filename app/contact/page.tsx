@@ -52,8 +52,8 @@ export default function Contact() {
             </div>
             <div className="card rounded-2xl p-8">
               <div className="mono accent text-xs tracking-widest mb-2">PHONE</div>
-              <a href="tel:+6584818854" className="text-xl font-semibold hover:underline accent">
-                +65 8481 8854
+              <a href="tel:+6583342286" className="text-xl font-semibold hover:underline accent">
+                +65 8334 2286
               </a>
             </div>
             <div className="card rounded-2xl p-8">
