@@ -145,6 +145,23 @@ export default function Services() {
         ))}
       </section>
 
+      <section className="max-w-7xl mx-auto px-8 pb-24">
+        <div className="tag mono mb-4">SPECIALIST PAGES</div>
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-10">Go deeper on your hire.</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          {[
+            { title: "CISO & Head of Cyber Executive Search", href: "/ciso-executive-search-singapore" },
+            { title: "Technology Risk & IT Audit Recruitment", href: "/technology-risk-it-audit-recruitment-singapore" },
+            { title: "Cybersecurity & Tech GRC Hiring for Financial Services", href: "/financial-services-cybersecurity-recruitment" },
+          ].map((l) => (
+            <a key={l.href} href={l.href} className="card rounded-2xl p-7 block hover:no-underline group">
+              <div className="text-lg font-bold mb-4 leading-snug">{l.title}</div>
+              <span className="mono accent text-xs tracking-widest group-hover:underline">READ MORE →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <FaqSection eyebrow="FREQUENTLY ASKED" title="Common questions, answered." items={faqs} />
 
       {/* CTA */}
