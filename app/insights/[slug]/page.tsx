@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const socialBlurb =
     article.cardExcerpt ?? article.excerpt.slice(0, 150).replace(/\s+\S*$/, "") + "…";
   return {
-    title: `${article.title} — Lico Resources`,
+    title: article.title.replace(/\.$/, ""),
     description: socialBlurb,
     alternates: { canonical: `/insights/${slug}` },
     openGraph: {
