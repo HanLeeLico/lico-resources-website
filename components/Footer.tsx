@@ -8,6 +8,11 @@ export default function Footer() {
         <div className="mono text-xs text-black/40">SINGAPORE · APAC · MIDDLE EAST</div>
         <div className="mono text-xs text-black/30">© {new Date().getFullYear()} LICO RESOURCES · <a href="/privacy" className="hover:text-black underline">PRIVACY POLICY</a></div>
       </div>
+      <nav className="max-w-7xl mx-auto mt-6 flex flex-wrap gap-x-6 gap-y-2 mono text-xs text-black/40">
+        <a href="/ciso-executive-search-singapore" className="hover:text-black underline">CISO EXECUTIVE SEARCH</a>
+        <a href="/technology-risk-it-audit-recruitment-singapore" className="hover:text-black underline">TECH RISK &amp; IT AUDIT RECRUITMENT</a>
+        <a href="/financial-services-cybersecurity-recruitment" className="hover:text-black underline">FINANCIAL SERVICES CYBER RECRUITMENT</a>
+      </nav>
     </footer>
   );
 }
