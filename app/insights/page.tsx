@@ -54,6 +54,22 @@ export default function InsightsPage() {
         </a>
       </section>
 
+      <section className="max-w-7xl mx-auto px-8 pb-12">
+        <Link
+          href="/h2-2026"
+          className="card rounded-2xl p-7 md:p-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 hover:no-underline group"
+        >
+          <span className="mono text-xs accent-bg text-white px-2.5 py-1 rounded tracking-widest self-start md:self-center shrink-0">MARKET REPORT</span>
+          <div className="flex-1">
+            <h2 className="text-2xl font-extrabold tracking-tight mb-2">H2 2026 Snapshot &amp; Outlook.</h2>
+            <p className="text-black/60 leading-relaxed">
+              Cybersecurity and tech GRC hiring in Singapore financial services: pay bands, contracting and the regulatory calendar.
+            </p>
+          </div>
+          <span className="mono accent text-xs tracking-widest group-hover:underline shrink-0">SEE THE REPORT →</span>
+        </Link>
+      </section>
+
       <section className="bg-[#F4F1ED] border-y border-black/10">
         <div className="max-w-7xl mx-auto px-8 py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
