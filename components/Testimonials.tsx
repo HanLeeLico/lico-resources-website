@@ -7,6 +7,7 @@ type Testimonial = {
 };
 
 const testimonials: Testimonial[] = [
+  { quote: "Han listens to my needs and expectations, and offers suggestions and advice based on the market situation and his knowledge. His team usually identifies suitable candidates in a few weeks where a general search would have taken months.", name: "Qing Qing Dai", role: "General Manager, Buchi Singapore and Malaysia", photo: "/testimonials/qingqingdai.jpg", initials: "QD" },
   { quote: "Professional, efficient, and results-driven. Lico Resources exceeded our expectations in finding top-tier talent.", name: "Suzie Ahmad", role: "Senior Regional TA Lead, HCLTech", photo: "/testimonials/suzieahmed.jpg", initials: "SA" },
   { quote: "Lico Resources demonstrated exceptional professionalism and deep understanding of our requirements.", name: "George Francis Albert", role: "Senior Manager, Infrastructure Information Security & Governance, AIA Singapore", photo: "/testimonials/georgefrancisalbert.jpg", initials: "GA" },
   { quote: "Their expertise in cybersecurity recruitment is unmatched. Highly recommend their services.", name: "Kevin Lai", role: "Assistant Director, Synapse", photo: "/testimonials/kevinlai.jpg", initials: "KL" },
