@@ -88,8 +88,8 @@ const services = [
     number: "03",
     title: "Contract Staffing",
     summary: "Flexible engagements for project-based needs.",
-    body: "vCISOs, interim Heads of Risk or Audit, project-based pen-test crews, cloud-security SMEs for regulatory uplifts. Day-rate or fixed-scope arrangements through Lico's contractor framework. See the contractor page for portal access.",
-    bullets: ["Interim leadership engagements", "Fixed-scope project crews", "Day-rate or milestone billing"],
+    body: "vCISOs, interim Heads of Risk or Audit, project-based pen-test crews, cloud-security SMEs for regulatory uplifts. There are two ways to work with us. Direct hire: we find the specialist, and you contract with them directly on day-rate or fixed-scope terms agreed between you and them. Lico-employed: we employ and pay the professional, and place them with your team on a contract of any length, from one month to a year or more, so you get the skills you need without adding headcount. See the contractor page for portal access.",
+    bullets: ["Interim leadership engagements", "Fixed-scope project crews", "Day-rate or fixed-scope terms set by you and the specialist"],
   },
   {
     number: "04",
