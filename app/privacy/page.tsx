@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-const LAST_UPDATED = "7 October 2026";
+const LAST_UPDATED = "24 November 2026";
 
 function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-2xl font-bold tracking-tight mt-12 mb-4">{children}</h2>;
@@ -194,7 +194,9 @@ export default function Privacy() {
         <H2>12. Contact our Data Protection Officer</H2>
         <P>If you have any questions about this policy or your personal data, please contact:</P>
         <div className="card rounded-2xl p-8 mb-4 text-black/70 leading-relaxed">
-          <strong className="text-black">Sze Lee, Data Protection Officer</strong>
+          <strong className="text-black">Lee Sze Uarn (Sze Lee), Data Protection Officer</strong>
+          <br />
+          EA Registration No: R1656780
           <br />
           Lico Resources Pte. Ltd.
           <br />
