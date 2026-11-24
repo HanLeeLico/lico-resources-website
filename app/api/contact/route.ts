@@ -10,7 +10,7 @@ import { NextResponse } from "next/server";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "info@licoresources.com";
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "enquiries@licoresources.com";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "info@licoresources.com";
 
 // In-memory rate limiter (per-IP). Replace with Upstash for multi-instance.
 const recentByIp = new Map<string, number[]>();
