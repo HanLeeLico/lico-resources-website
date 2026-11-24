@@ -69,7 +69,7 @@ export default function Contact() {
               <div className="space-y-1 text-sm text-black/65">
                 <div>EA Licence: <span className="font-semibold text-black">13C6733</span></div>
                 <div>UEN: <span className="font-semibold text-black">201322494Z</span></div>
-                <div>Lico Resources Pte Ltd</div>
+                <div>Lico Resources Pte. Ltd.</div>
               </div>
             </div>
             <div className="card rounded-2xl p-8">
