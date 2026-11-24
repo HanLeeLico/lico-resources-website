@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "Are you licensed to recruit in Singapore?",
     answer:
-      "Yes. Lico Resources Pte Ltd holds Singapore Employment Agency Licence 13C6733 and operates under UEN 201322494Z. We are fully compliant with the Employment Agencies Act and the Personal Data Protection Act (PDPA).",
+      "Yes. Lico Resources Pte. Ltd. holds Singapore Employment Agency Licence 13C6733 and operates under UEN 201322494Z. We are fully compliant with the Employment Agencies Act and the Personal Data Protection Act (PDPA).",
   },
   {
     question: "How does your fee structure work?",
