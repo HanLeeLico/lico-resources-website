@@ -7,7 +7,7 @@
 
 const SITE_URL = "https://www.licoresources.com";
 const ORG_NAME = "Lico Resources";
-const ORG_LEGAL_NAME = "Lico Resources Pte Ltd";
+const ORG_LEGAL_NAME = "Lico Resources Pte. Ltd.";
 
 // =============================================================
 // ProfessionalService — primary entity. More specific than Organization,

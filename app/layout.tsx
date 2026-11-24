@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Lico Resources" }],
   creator: "Lico Resources",
-  publisher: "Lico Resources Pte Ltd",
+  publisher: "Lico Resources Pte. Ltd.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

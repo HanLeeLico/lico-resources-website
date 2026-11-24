@@ -13,6 +13,7 @@ export default function Footer() {
         <a href="/technology-risk-it-audit-recruitment-singapore" className="hover:text-black underline">TECH RISK &amp; IT AUDIT RECRUITMENT</a>
         <a href="/financial-services-cybersecurity-recruitment" className="hover:text-black underline">FINANCIAL SERVICES CYBER RECRUITMENT</a>
       </nav>
+      <div className="max-w-7xl mx-auto mt-6 mono text-xs text-black/50">Lico Resources Pte. Ltd. | <span className="whitespace-nowrap">EA Licence No: 13C6733</span></div>
     </footer>
   );
 }

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", images: ["/og-h2-2026.png"] },
 };
 
-const REPORT_EMAIL = "nicole@licoresources.com";
+const REPORT_EMAIL = "info@licoresources.com";
 
 const stats = [
   { value: "+10–12%", label: "Cloud Sec / AppSec", note: "Head-of-function comp movement, H1 2026" },
