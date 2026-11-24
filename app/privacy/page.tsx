@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — Lico Resources",
   description:
-    "How Lico Resources Pte Ltd collects, uses and protects personal data under Singapore's Personal Data Protection Act 2012 (PDPA).",
+    "How Lico Resources Pte. Ltd. collects, uses and protects personal data under Singapore's Personal Data Protection Act 2012 (PDPA).",
   alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy — Lico Resources",
@@ -40,7 +40,7 @@ export default function Privacy() {
         <div className="tag mono mb-4">PRIVACY</div>
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 max-w-3xl">Privacy Policy</h1>
         <p className="text-black/65 text-lg max-w-3xl leading-relaxed">
-          <strong>Lico Resources Pte Ltd</strong>
+          <strong>Lico Resources Pte. Ltd.</strong>
           <br />
           Last updated: {LAST_UPDATED}
         </p>
@@ -49,7 +49,7 @@ export default function Privacy() {
       <section className="max-w-7xl mx-auto px-8 pb-24">
         <div className="max-w-3xl">
         <H2>1. Who we are</H2>
-        <P>Lico Resources Pte Ltd (&quot;Lico Resources&quot;, &quot;we&quot;, &quot;us&quot;) is an executive search firm in Singapore.</P>
+        <P>Lico Resources Pte. Ltd. (&quot;Lico Resources&quot;, &quot;we&quot;, &quot;us&quot;) is an executive search firm in Singapore.</P>
         <UL>
           <li>UEN: 201322494Z</li>
           <li>Employment Agency Licence No: 13C6733</li>
@@ -196,7 +196,7 @@ export default function Privacy() {
         <div className="card rounded-2xl p-8 mb-4 text-black/70 leading-relaxed">
           <strong className="text-black">Sze Lee, Data Protection Officer</strong>
           <br />
-          Lico Resources Pte Ltd
+          Lico Resources Pte. Ltd.
           <br />
           Email:{" "}
           <a href="mailto:info@licoresources.com" className="accent underline">
