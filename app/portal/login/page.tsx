@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Logo from "@/components/Logo";
 import LoginForm from "@/components/LoginForm";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Contractor Portal",
@@ -63,16 +64,7 @@ export default function PortalLoginPage() {
         </div>
       </section>
 
-      <footer className="border-t border-black/10 px-8 py-6">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4 text-xs text-black/40 mono tracking-widest">
-          <div>© {new Date().getFullYear()} LICO RESOURCES PTE LTD · EA LICENCE 13C6733</div>
-          <div className="flex gap-6">
-            <Link href="/contact" className="hover:text-black">CONTACT</Link>
-            <Link href="#" className="hover:text-black">PRIVACY</Link>
-            <Link href="#" className="hover:text-black">TERMS</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
